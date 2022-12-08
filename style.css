@@ -1,0 +1,187 @@
+
+/* GLOBAL CSS INCLUDING NAVBAR */
+
+html,
+body{
+    margin: 0;
+    font-family: 'Inknut Antiqua', serif;
+    min-width:fit-content;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+header nav{
+    align-items: center;
+    display: flex;
+    font-weight: 400;
+    font-size: 30px;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 800px;
+    margin-right: 2%;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px auto;
+    margin: 0 auto;
+    flex-direction: row;
+    background-color: #AFCBAB;
+}
+
+.header-logo{
+  height: 130px;
+}
+
+nav a{
+  transition: all .3s; 
+  font-size: 28px
+}
+
+nav a:hover{
+    color:#4c5648;
+    transition: all .3s; 
+}
+
+.inner-nav{
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+
+.mobile-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 80px;
+    width: 40px;
+    outline: none;
+    padding: 0px;
+}
+
+.mobile-icon{
+    background-color:#789178;
+    height: 4px;
+    width: 35px;
+    position: relative;
+    border-radius: 4px;
+    transition: all .25s;
+}
+
+.mobile-icon.toggled{
+    background-color: transparent;
+}
+
+.mobile-icon.toggled::before{
+    top: 0px;
+    transform: rotate(-45deg);
+}
+.mobile-icon.toggled::after{
+    bottom: 0px;
+    transform: rotate(45deg)
+}
+
+.mobile-icon::before,
+.mobile-icon::after{
+    background-color:#789178;
+    border-radius: 4px;
+    content: "";
+    height: 4px;
+    width: 35px;
+    left: 0;
+    position: absolute;
+    transition: all .25s;
+}
+.mobile-icon::before{
+    top: -12px;
+}
+.mobile-icon::after{
+    bottom: -12px;
+}
+
+.nav-spacer{
+    width: 40px;
+    height: 1px;
+    content: "";
+}
+
+.mobile-menu{
+    background-color:#789178;
+    width: 80%;
+    max-width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 3;
+    transition: transform .5s ease;
+}
+
+.mobile{
+    display: none;
+}
+
+.open{
+    transform: translate(0);
+}
+
+.mobile-menu nav{
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+.mobile-menu a{
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+@media (max-width: 1250px) {
+  .header-logo{
+    width: 70%;
+    max-width: 208px;
+    height: auto;
+    justify-content: center;
+  }
+  .mobile{
+      display: block;
+  }
+  .nav-menu{
+      display: none;
+      position: absolute;
+  }
+  header .container{
+      justify-content: center;
+      padding: 10px 20px;
+  }
+  .inner-nav{
+      width: 83%;
+  }
+}
+
+@media (max-width: 450px){
+  .header-logo{
+    width: 70%;
+    margin-bottom: 2px;
+  }
+  .mobile-icon,
+  .mobile-icon::before,
+  .mobile-icon::after{
+    height: 3px;
+    width: 30px;
+  }
+}

@@ -1,0 +1,64 @@
+
+  /* MAIN CSS */
+.container{
+  display: flex;
+  align-content: center;
+}
+.menu{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2);
+  align-content: center; 
+  grid-column-gap: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.onlinelink{
+  display: flexbox; 
+  text-align: center;
+  font-size: 25px;
+}
+
+@media(max-width: 1250px){
+  /*  TABLET CSS  */
+  .container{
+    display: flex;
+    align-content: center;
+  }
+  .menu{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3);
+    align-content: center; 
+    grid-column-gap: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .onlinelink{
+    display: flexbox; 
+    text-align: center;
+    font-size: 25px;
+  }
+}
+
+@media(max-width: 650px){
+  /*  MOBILE CSS  */
+  .container{
+    display: flex;
+    align-content: center;
+  }
+  .menu{
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6);
+    align-content: center; 
+    grid-column-gap: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.onlinelink{
+    display: flexbox; 
+    text-align: center;
+    font-size: 25px;
+  }
+}
